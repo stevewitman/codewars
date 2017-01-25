@@ -72,3 +72,33 @@ function basicOp(operation, value1, value2) {
       return 0;
   }
 }
+
+/ #####################################################################
+// https://www.codewars.com/kata/fake-binary
+// TAGS: for/if/else map reduce
+
+function fakeBin(x) {
+  var result = ''
+  for (var i=0; i<x.length; i++) {
+    if (parseInt(x[i]) <5) {
+      result += '0'
+    } else {
+      result += '1'
+    }
+  }
+  return result
+}
+
+function fakeBin(x) {
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+
+const fakeBin=x=>[...x].reduce((a,b)=>a+(~~(+b/5)),"")
+
+function fakeBin(x){
+  return x.replace(/[1234]/g, '0').replace(/[56789]/g, '1')
+}
+
+function fakeBin(x){
+  return x.replace( /[0-4]/g, "0" ).replace( /[5-9]/g, "1" )
+}
