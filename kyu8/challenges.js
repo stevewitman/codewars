@@ -1,5 +1,6 @@
 // https://www.codewars.com/kata/even-or-odd
-// tags: modulo
+// TAGS: modulo
+
 function even_or_odd(number) {
   if (number % 2 === 0) {
     return "Even"
@@ -20,7 +21,21 @@ even_or_odd = n => n % 2 === 0 ? 'Even' : 'Odd'
 
 // #####################################################################
 // https://www.codewars.com/kata/reversing-words-in-a-string
-// split/join 
+// TAGS: split/join loop/concatenate
+// NOTES: test not written ... tricky for beginners
+
+function reverse(string){
+  var words = string.split(' ')
+  var result = ''
+  for (var i=words.length-1; i>=0; i--) {
+    result += words[i]
+    if (i>0) {
+      result += ' '
+    }
+  }
+  return result
+}
+
 function reverse(string){
   return string.split(' ').reverse().join(' ')
 }
